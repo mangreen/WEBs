@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<link rel="stylesheet" type="text/css" href="css/decorselect/decorselect.css" />
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js"></script>
+<script type="text/javascript">window.jQuery || document.write('<script type="text/javascript" src="js/libs/jquery-1.6.0.min.js">\x3C/script>')</script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.13/jquery-ui.min.js"></script>
+<script type="text/javascript">window.jQuery || document.write('<script type="text/javascript" src="js/libs/jquery-ui-1.8.13.min.js">\x3C/script>')</script>
+<script type="text/javascript" src="js/jquery.decorselect.js"></script>
+<title>Insert title here</title>
+<!-- INPUTSELECT -->
+<script type="text/javascript">
+$(document).ready(function(){
+	$("#language").decorselect();
+
+	$("#change").click(function(){
+		//var option = new Option("13","한국의");
+		//$("#language").options[0]=option;
+		//$("#language").append('<option value="13" selected="selected">한국의</option>').change();
+		
+		if("disabled" == $("#language").attr("disabled")){
+			$("#language").removeAttr("disabled").change();
+			//$("#language").decorselect({"timeout": 0, "mode":"none"});
+			$("#language").val("4").change();
+		}else{
+			$("#language").attr("disabled","disabled").change();
+			//$("#language").decorselect({"timeout": 0,"mode":"disabled"});
+			$("#language").val("12").change();
+		}
+	});
+
+	$("#language").change(function(event){
+		//alert(true);// Your code here
+	});
+
+	$("#textP").click(function(){
+		alert("value: "+$("#language").val());
+	});
+});
+</script>
+</head>
+<body>
+	<div id="uboxstyle">
+	<h3 style="color:#6D93AB;font-size:14px;">U-Box Style</h3>
+	<select name="language" id="language">
+		<option value=""></option>
+		<option value="1">English</option>
+		<option value="2">简体中文</option>
+		<option value="3">日本語</option>
+		<option value="4" >Deutsch</option>
+		<option value="5" >Espa?ol</option>
+		<option value="6" >Fran?ais</option>
+		<option value="7" >Italiano</option>
+		<option value="8" >Polski</option>
+		<option value="9" >Português</option>
+		<option value="10">Svenska</option>
+		<option value="11" >Türk?e</option>
+		<option value="12" >Руccкий</option>
+	</select>
+	<button id="change" type="button">Click Me!</button>
+	<p id="textP">Select</p>
+	</div>
+	<br /><br />
+	<h3 style="color:#6D93AB;font-size:14px;">Mac Style</h3>
+	<div id="macstyle">
+		<select name="language_mac" id="language_mac" disabled="disabled">
+			<option value="English"  selected="selected">English</option>
+			<option value="简体中文" >简体中文</option>
+			<option value="日本語" >日本語</option>
+			<option value="Deutsch" >Deutsch</option>
+			<option value="Espa?ol" >Espa?ol</option>
+			<option value="Fran?ais" >Fran?ais</option>
+			<option value="Italiano" >Italiano</option>
+			<option value="Polski" >Polski</option>
+			<option value="Português" >Português</option>
+			<option value="Svenska" >Svenska</option>
+			<option value="Türk?e" >Türk?e</option>
+			<option value="Руccкий" >Руccкий</option>
+		</select>
+	</div>
+</body>
+</html>

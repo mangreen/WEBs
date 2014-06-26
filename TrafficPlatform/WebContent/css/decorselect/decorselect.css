@@ -1,0 +1,56 @@
+@CHARSET "UTF-8";
+
+
+.orange.select_box{
+	display:inline-table;
+	vertical-align:text-top;
+	font:16px/150% "Lucida Grande", Arial, Verdana, Helvetica, serif;
+}
+
+.orange.tag_select{
+	background: url("images/decorselect.png") right top no-repeat;
+	background-color: #ffffff; 
+	border:1px solid #ebd9b3; 
+	padding:0 10px;
+	color:#000000;
+}
+
+.orange.tag_select_hover{
+	background: url("images/decorselect_hover.png") right top no-repeat;
+	background-color: #ffffff;  
+	border:1px solid #ebd9b3;
+}
+
+.orange.tag_select_open{
+	background: url("images/decorselect_open.png") right top no-repeat;
+	background-color: #ffffff; 
+}
+
+.orange.tag_select_disabled{
+	background: url("images/decorselect_disabled.png") right top no-repeat; 
+	background-color: #f4f4f4;
+	color:#aaaaaa;
+}
+
+.orange.tag_options{
+	border:1px solid #ebd9b3; 
+	background:#554466;
+	position:absolute;
+	padding:0;
+	margin:0;
+	list-style:none;
+	color:#000000;
+}
+
+.orange.liopt{
+	padding:0 10px;
+	background:#ffffff;
+}
+
+.orange.liopt_selected{
+	background:#ebd9b3;
+}
+
+.orange.liopt_hover{
+	background:#ffa20c;
+}

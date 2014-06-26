@@ -1,0 +1,169 @@
+@CHARSET "UTF-8";
+
+label{
+	/*
+	width: 6em;
+	float: left;
+	text-align: right;
+	margin-right: 0.5em;
+	display: block;
+	*/
+	margin-left: 1.0em;
+}
+
+fieldset{
+	border: 1px solid #444444;
+	margin:0 auto;
+	width: 90%;
+}
+
+legend
+{
+	/*
+	color: #fff;
+	background: #ffa20c;
+	border: 1px solid #781351;
+	*/
+	padding: 2px 6px;
+} 
+
+hr{
+	border:0; height:1px;
+	background-color:#444444;
+	color:#444444	/* IE6 */
+}
+
+.submit input{
+	margin-left: 4.5em;
+}
+
+.datepicker{
+	/*text-align: right;*/
+	width:140px;
+}
+
+.timepicker{
+	/*text-align: right;*/
+	width:70px;
+}
+
+.dateicon{
+	background:url("../images/icon_nocircle.png") -102px -38px;/* 例如0px -32px 底圖往左移0px, 往上移32px */
+	display:inline-block;
+	width:18px;
+	height:18px;
+	cursor:pointer;
+	margin-left: 0.2em;
+	margin-right: 0.3em;
+}
+
+.timeicon{
+	background:url("../images/icon_nocircle.png") -71px -39px;/* 例如0px -32px 底圖往左移0px, 往上移32px */
+	display:inline-block;
+	width:18px;
+	height:18px;
+	cursor:pointer;
+	margin-left: 0.2em;
+	margin-right: 0.3em;
+}
+
+.weekday{
+	margin-left: 0em;
+	margin-right: 0.2em;
+}
+
+#programinput{
+	width:300px;
+}
+/*
+#startdatelabel{
+	position:absolute;
+	left:245px;
+	top:150px;
+}
+
+#starttimelabel{
+	position:absolute;
+	left:355px;
+	top:150px;
+}
+
+#enddatelabel{
+	position:absolute;
+	left:293px;
+	top:195px;
+}
+
+#endtimelabel{
+	position:absolute;
+	left:403px;
+	top:195px;
+}
+*/
+#endcheck{
+	float: left;
+	margin-left: 3.0em;
+	margin-right: -0.0em;
+}
+
+#intervalinput{
+	width: 70px;
+}
+
+#dateinput{
+	width:70px;
+}
+
+/*確定*/
+#confirm.button{
+	background:url("../images/icon.png") -128px -32px;/* 例如0px -32px 底圖往左移0px, 往上移32px */
+	height:32px;
+	line-height:32px;
+	width:32px;
+	float:right;
+	margin-right:20px;	/*距右多少*/
+	
+	padding-top: 0; 	/* 嚴格限定0 . 否则...*/
+	padding-bottom: 0; 	/* 同上 */
+	padding-left: 0px; /* 設定以免小圖示被文字覆盖掉.. padding-right 可設可不設.. */
+	overflow: hidden; 	/*某些情況會用到 */
+}
+#confirm:hover.button{
+	background:url("../images/icon_hover.png") -128px -32px;
+}
+
+#confirm:active.button{
+	background:url("../images/icon_press.png") -128px -32px;
+}
+#confirm.disable{
+	background:url("../images/icon_disable.png") -128px -32px;
+	float:right;
+	margin-right:20px;	/*距右多少*/
+	cursor:default
+}
+
+/*取消*/
+#cancel.button{
+	background:url("../images/icon.png") -128px -0px;
+	height:32px;
+	width:32px;
+	float:right;
+	margin-right:20px;/*距右多少*/
+	
+	padding-top: 0; 	/* 嚴格限定0 . 否则...*/
+	padding-bottom: 0; 	/* 同上 */
+	padding-left: 0px; /* 設定以免小圖示被文字覆盖掉.. padding-right 可設可不設.. */
+	overflow: hidden; 	/*某些情況會用到 */
+}
+#cancel:hover.button{
+	background:url("../images/icon_hover.png") -128px -0px;
+}
+#cancel:active.button{
+	background:url("../images/icon_press.png") -128px -0px;
+}
+#cancel.disable{
+	background:url("../images/icon_disable.png") -128px -0px;
+	float:right;
+	margin-right:20px;/*距右多少*/
+	cursor:default
+}

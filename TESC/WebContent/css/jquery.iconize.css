@@ -1,0 +1,25 @@
+﻿* {
+	padding:0px;
+	margin:0px;
+}
+
+ul {
+	margin-left:20px;
+}
+
+#pane2 {
+	background:#C4E4C4;
+	display:block;
+	position:absolute;
+	padding:20px;
+}
+
+#dock {
+	left: 0px;
+	top: 20px;
+	width: 600px;
+	border: 2px solid orange;
+	height: 40px;
+	display: block;
+}
+

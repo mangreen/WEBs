@@ -1,0 +1,286 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" charset="UTF-8"/>
+<meta http-equiv="Cache-Control" content="no-cache">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0"> 
+
+<link rel="shortcut icon" href="img/favicon.ico">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+
+<link rel="stylesheet" type="text/css" media="only screen and (max-device-width: 960px)  and (max-device-height: 640px)" href="css/handheld.css">
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript">window.jQuery || document.write('<script type="text/javascript" src="js/libs/jquery-1.7.1.min.js">\x3C/script>')</script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.13/jquery-ui.min.js"></script>
+<script type="text/javascript">window.jQuery || document.write('<script type="text/javascript" src="js/libs/jquery-ui-1.8.13.min.js">\x3C/script>')</script>
+
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+<script type="text/javascript" src="js/jquery.mousewheel.js"></script>
+
+<script type="text/javascript" src="js/jquery.client.js"></script>
+<script type="text/javascript" src="js/jquery.timers.js"></script>
+<script type="text/javascript" src="js/spin.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+
+</head>
+<body>
+
+	<div id="routelist">
+	
+		<div id="route_1" class="routediv">
+			<div class="route_content">
+				<div class="route_bar">
+					<div class="n_light"></div>
+					<span class="route_span">262</span>
+				</div>
+				<div class="est_time_bar">
+				預估到站時間剩餘
+					<span class="e_time">22</span>
+					分鐘
+				</div>
+				<div class="stand_line">
+					<div class="stand">
+						<div class="circle">35</div>
+						<span class="stand_span">市民大道口</span>
+					</div>
+					<div class="mid"></div>
+					
+					<div class="stand">
+						<div class="circle">45</div>
+						<span class="stand_span">市政府捷運站</span>
+					</div>
+					<div class="mid"></div>
+				</div>
+			</div>
+			
+			<div class="routemove">
+				<div id="routeleft" class="arrowleft btn">
+				</div>
+				<div id="routeright" class="arrowright btn">
+				</div>
+			</div>
+		</div>
+		
+		<div id="route_2" class="routediv">
+			<div class="route_content">
+				<div class="route_bar">
+					<span class="route_span">懷恩專車s31(公館六張犁)</span>
+				</div>
+				
+				<div id="line_2" class="stand_line">
+					<div class="stand">
+						<div class="circle"></div>
+						<span class="stand_span">市民大道口</span>
+					</div>
+					<div class="midway"></div>
+					<div class="midway"></div>
+					<div class="midway"></div>
+					<div id="stand_2_2" class="stand">
+						<div class="circle"></div>
+						<span class="stand_span">市政府捷運站</span>
+					</div>
+					<div class="midway"></div>
+				</div>
+			</div>
+
+			<div class="routemove">
+				<div id="routeleft" class="arrowleft btn">
+				</div>
+				<div id="routeright" class="arrowright btn">
+				</div>
+			</div>
+		</div>
+		
+		<div id="route_3" class="routediv">
+			<div class="route_content">
+				<div class="route_bar">
+					<span class="route_span">紅32</span>
+				</div>
+				
+				<div class="stand_line">
+					<div class="stand">
+						<div class="circle"></div>
+						<span class="stand_span">市民大道口</span>
+					</div>
+					<div class="mid"></div>
+					
+					<div class="stand">
+						<div class="circle"></div>
+						<span class="stand_span">市政府捷運站</span>
+					</div>
+					<div class="mid"></div>
+				</div>
+			</div>
+		
+			<div class="routemove">
+				<div id="routeleft" class="arrowleft btn">
+				</div>
+				<div id="routeright" class="arrowright btn">
+				</div>
+			</div>
+		</div>
+		
+		<div id="route_4" class="routediv">
+			<div class="route_content">
+				<div class="route_bar">
+					<span class="route_span">299</span>
+				</div>
+				
+				<div class="stand_line">
+					<div class="stand">
+						<div class="circle"></div>
+						<span class="stand_span">市民大道口</span>
+					</div>
+					<div class="mid"></div>
+					
+					<div class="stand">
+						<div class="circle"></div>
+						<span class="stand_span">市政府捷運站</span>
+					</div>
+					<div class="mid"></div>
+				</div>
+			</div>
+			
+			<div class="routemove">
+				<div id="routeleft" class="arrowleft btn">
+				</div>
+				<div id="routeright" class="arrowright btn">
+				</div>
+			</div>
+		</div>
+		
+		<div id="route_5" class="routediv">
+			<div class="route_content">
+				<div class="route_bar">
+					<span class="route_span">232</span>
+				</div>
+				
+				<div class="stand_line">
+					<div class="stand">
+						<div class="circle"></div>
+						<span class="stand_span">市民大道口</span>
+					</div>
+					<div class="mid"></div>
+					
+					<div class="stand">
+						<div class="circle"></div>
+						<span class="stand_span">市政府捷運站</span>
+					</div>
+					<div class="mid"></div>
+				</div>
+			</div>
+			
+			<div class="routemove">
+				<div id="routeleft" class="arrowleft btn">
+				</div>
+				<div id="routeright" class="arrowright btn">
+				</div>
+			</div>
+		</div>
+		
+		<div id="route_6" class="routediv">
+			<div class="route_content">
+				<div class="route_bar">
+					<span class="route_span">281</span>
+				</div>
+				
+				<div class="stand_line">
+					<div class="stand">
+						<div class="circle"></div>
+						<span class="stand_span">市民大道口</span>
+					</div>
+					<div class="mid"></div>
+					
+					<div class="stand">
+						<div class="circle"></div>
+						<span class="stand_span">市政府捷運站</span>
+					</div>
+					<div class="mid"></div>
+				</div>
+			</div>
+			
+			<div class="routemove">
+				<div id="routeleft" class="arrowleft btn">
+				</div>
+				<div id="routeright" class="arrowright btn">
+				</div>
+			</div>
+		</div>
+		
+	</div>
+	
+	<div id="namelist">
+		<div class="namemove">
+			<div id="nameup" class="arrowup btn">
+			</div>
+			<div id="namedown" class="arrowdown btn">
+			</div>
+		</div>
+		<div id="namedrop">
+			<div id="namedrag">
+				<div class="namegroup">
+					<div class="namebtn btn">
+						<div class="nlight"></div>
+						<span class="n_span">262</span>
+					</div>
+					<div class="namebtn btn">
+						<div class="n_light"></div>
+						<span class="n_span">懷恩專車s31(公館六張犁)懷恩專車</span>
+					</div>
+					<div class="namebtn btn">
+						紅32
+					</div>
+				</div>
+				<div class="namegroup">
+					<div class="namebtn btn">
+						262
+					</div>
+					<div class="namebtn btn">
+						262
+					</div>
+					<div class="namebtn btn">
+						262
+					</div>
+				</div>
+				<div class="namegroup">
+					<div class="namebtn btn">
+						懷恩專車s31(公館六張犁)
+					</div>
+					<div class="namebtn btn">
+						懷恩專車s31(公館六張犁)
+					</div>
+					<div class="namebtn btn">
+						懷恩專車s31(公館六張犁)
+					</div>
+				</div>
+				<div class="namegroup">
+					<div class="namebtn btn">
+						紅32
+					</div>
+					<div class="namebtn btn">
+						紅32
+					</div>
+					<div class="namebtn btn">
+						紅32
+					</div>
+				</div>
+				<div class="namegroup">
+					<div class="namebtn btn">
+						262
+					</div>
+					<div class="namebtn btn">
+						懷恩專車s31(公館六張犁)
+					</div>
+					<div class="namebtn btn">
+						紅32
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+		
+</body>
+</html>

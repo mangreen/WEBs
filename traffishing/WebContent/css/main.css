@@ -1,0 +1,494 @@
+@CHARSET "UTF-8";
+
+html, body, #map_canvas {
+	font-family: 'Open Sans', sans-serif;
+	
+	margin: 0;
+  	padding: 0;
+  	height: 100%;
+}
+
+ul{
+	list-style: none outside none;
+	margin: 0; padding: 0;
+}
+
+input{
+	background: url("../img/bg_white.png");
+	border: 1px solid #777777;
+	color: white;
+}
+
+.btn{
+	outline:none;/*移除對焦框*/
+}
+
+.liopt{
+	cursor: pointer;
+	font-size:16px;
+	height: 24px;
+	width:100%;
+	margin: 8px 0;
+}
+
+:hover.liopt{
+	background: url("../img/bg_white.png");
+	/*background: #1c1c1c;*/
+	color: white;
+}
+
+#toolbar {
+	position:absolute; 
+	top:0; 
+	left:0; 
+	width:100%;
+	height:40px; 
+	z-index:100; 
+	background: url("../img/bg.png");
+	display: block;
+}
+
+#logo {
+	position:absolute; 
+	top:0; 
+	left:0; 
+	width: 170px;
+	height:40px; 
+	z-index:100; 
+	background: url("../img/logo.png");
+	text-align:left;
+	outline:none; 
+}
+
+.lfloat{
+
+	width: 100px;
+	height:40px; 
+	z-index:100;
+	margin: 0 auto;
+}
+
+.rfloat{
+	/*background: #3290bf;*/
+	position:absolute; 
+	top:0;
+	right:10px;
+	width:10px;
+	height:40px; 
+	z-index:100;
+	display: block;
+}
+
+#username{
+	float: right;
+	color: #33ccff;
+	text-decoration:none;
+	outline:none;
+	
+	/*以下是寬&高不是圖片的寬&高，而是包覆圖片的DIV的寬&高*/
+	width: 120px;
+	height: 40px;
+	text-align: center;
+	/*line-height設定是重點，建議可以設成跟height一樣*/
+	line-height: 40px;
+	/* IE */
+	/* 專為IE7調整，32px=40px*0.8 */
+	/*font-size : 32px;
+	font-family : Arial;*/
+}
+
+#user_menu{
+	color:#33ccff;
+	background: url("../img/bg.png");
+	/*background: black;
+	filter:alpha(opacity=80);opacity:0.8;zoom:1;*/
+	border: 1px solid silver;
+	
+	list-style: none outside none;
+    padding: 10px;
+    width:120px;
+    display: none;
+    float: right;
+    margin-top: 2px; 
+    z-index: 100;
+}
+
+#signin{
+	float: right;
+	width: 100px;
+	height:40px; 
+}
+
+#login{
+	background: url("../img/icon.png") -0px -176px;
+	width: 48px;
+	height: 24px;
+	
+	float: right;
+	text-decoration:none;
+	outline:none;
+}
+
+.gbts {
+	border-left: 1px solid #555555;
+}
+
+#register{
+	background: url("../img/icon.png") -144px -176px;
+	width: 48px;
+	height: 24px;
+	
+	float: right;
+	text-decoration:none;
+	outline:none;
+}
+
+.separator{
+	border-top: 1px solid #555555;
+	height:1px;
+	width: 100%;
+}
+
+
+
+#searchfloat{
+	top:0; 
+	left:230px;
+	width:20%;
+	height:40px;
+	z-index:100;
+	/*margin: 0 auto;*/
+	position:absolute;
+}
+
+#searchbar{
+
+}
+	
+#searchinput{
+	background: #FFF;
+	color: #000;
+	border:1px solid #000;
+
+	width:100%;
+	margin-top:0px; 
+	margin-left:0px;
+	outline:none; 
+}
+
+.iconbtn{
+	display:inline-block;
+	width:32px;
+	height:32px;
+	outline:none;
+	line-height:32px;
+	padding-top: 0; 	/* 嚴格限定0 . 否则...*/
+	padding-bottom: 0; 	/* 同上 */
+	padding-left: 0px; /* 設定以免小圖示被文字覆盖掉.. padding-right 可設可不設.. */
+	overflow: hidden; 	/*某些情況會用到 */
+	margin-left:5px;
+}
+
+#searchbtn.iconbtn{
+	background: url("../img/icon.png") -0px -16px;
+}
+#searchbtn:hover.iconbtn{
+	background: url("../img/icon.png") -64px -16px;
+}
+#searchbtn:active.iconbtn{
+	background: url("../img/icon.png") -0px -16px;
+}
+
+.firstHeading{
+	background: url("../img/icon.png") -288px -16px;
+	width:64px;
+	height:32px;
+}
+
+.bodyContent{
+	font-size: 16px;
+	margin: 0px 0px 10px 5px;
+}
+
+.popseparator{
+	border-top: 1px solid #dddddd;
+	height:10px;
+	width: 100%;
+}
+
+.popbtn{
+	display: block;
+	width:64px;
+	height:16px;
+	border: 1px solid #C6E2FF;
+}
+
+.popbtnhide{
+	display: none;
+}
+
+.popsetstart{
+	background: url("../img/icon.png") -0px -312px;
+	margin-left: 5px;
+}
+
+.popsetend{
+	background: url("../img/icon.png") -64px -312px;
+	margin-left: 5px;
+}
+
+.popaddpoint{
+	background: url("../img/icon.png") -128px -312px;
+	margin-left: 5px;
+}
+
+.popremovepin{
+	background: url("../img/icon.png") -192px -312px;
+	display: block;
+	width: 96px;
+	height:16px;
+	border: 1px solid #C6E2FF;
+	margin-left: 5px;
+}
+
+.dim{
+	position: absolute; 
+	top: 0; 
+	left: 0; 
+	width: 100%;
+	height: 100%; 
+	z-index: 999; 
+	background: url("../img/dim.png"); 
+	display: none; 
+	text-align: left;
+}
+/*
+#lg_dim{
+	display: none;
+}
+
+#rg_dim{
+	display: none;
+}
+*/
+.login_tile{
+	width: 600px; 
+	height: 400px; 
+	z-index: 200; 
+	border: 0px solid gray; 
+	background: url("../img/bg.png"); 
+	/*
+	filter:alpha(opacity=90);
+	-moz-opacity:0.9;
+	opacity: 0.9; 
+	*/
+	position: relative; 
+	top: 25%;
+	margin: 0 auto;
+	
+}
+
+.register_tile{
+	width: 600px; 
+	height: 550px; 
+	z-index: 200; 
+	border: 0px solid gray; 
+	background: url("../img/bg.png"); 
+	/*
+	filter:alpha(opacity=90);
+	-moz-opacity:0.9;
+	opacity: 0.9; 
+	*/
+	position: relative; 
+	top: 25%;
+	margin: 0 auto;
+}
+
+.lg_x{
+	background: url("../img/icon.png") -352px -0px;
+	width: 16px;
+	height: 16px;
+	
+	display: block;
+	float:right;
+	position: relative; 
+	top: 5px;
+	right: 5px;
+}
+
+.lg_x:hover{
+	background: url("../img/icon.png") -368px -0px;
+}
+
+#login_span{
+	background: url("../img/icon.png") -0px -328px; 
+	width: 64px; 
+	height: 32px;
+	
+	position: relative; 
+	top: 35px;
+	left: 50px;
+	
+	display: block; 
+}
+
+#register_span{
+	background: url("../img/icon.png") -128px -328px; 
+	width: 64px; 
+	height: 32px;
+	
+	position: relative; 
+	top: 35px;
+	left: 50px;
+	
+	display: block; 
+}
+
+.lg_s_position{
+	position: relative; 
+	top: 60px;
+}
+
+#login_form{
+	position: relative; 
+	top: 60px;
+	left: 60px;
+	text-align: left;
+}
+
+#register_form{
+	position: relative; 
+	top: 60px;
+	left: 60px;
+	text-align: left;
+}
+
+.lg_input{
+	margin-top: 10px;
+}
+
+.lg_mail_span{
+	background: url("../img/icon.png") -288px -312px; 
+	width: 64px; 
+	height: 16px;
+	
+	display: block; 
+}
+
+.lg_pw_span{
+	background: url("../img/icon.png") -352px -312px; 
+	width: 32px; 
+	height: 16px;
+	
+	display: block; 
+}
+
+.rg_pw_limit{
+	color: #888888;
+	font-size: 12px;
+	display: block;
+}
+
+.lg_nn_span{
+	background: url("../img/icon.png") -288px -296px; 
+	width: 32px; 
+	height: 16px;
+	
+	display: block; 
+}
+
+.lg_pw_cf_span{
+	background: url("../img/icon.png") -320px -280px; 
+	width: 64px; 
+	height: 16px;
+	
+	display: block; 
+}
+
+
+.rme_span{
+	background: url("../img/icon.png") -320px -296px; 
+	width: 64px; 
+	height: 16px;
+	
+	display: inline-block; 
+}
+
+#lg_readservice{
+	background: url("../img/icon.png") -0px -360px; 
+	width: 256px; 
+	height: 16px;
+	
+	display: inline-block;
+	cursor: pointer;
+}
+
+.lg_btn{
+	width: 48px;
+	height: 24px;
+	display: block;
+	
+	/*background: #336699;*/
+	background: #008B00;
+}
+
+.lg_btn:hover{
+	/*background: #33ccff;*/
+	background: #00DD00;
+}
+
+.lg_a{
+	width: 64px;
+	height: 16px;
+	display: inline-block;
+}
+
+#lg_login_img{
+	background: url("../img/icon.png") -48px -176px; 
+	width: 48px; 
+	height: 24px;
+	
+	display: block; 
+}
+
+#lg_register_img{
+	background: url("../img/icon.png") -192px -176px; 
+	width: 48px; 
+	height: 24px;
+	
+	display: block; 
+}
+
+#lg_forget{
+	background: url("../img/icon.png") -320px -328px;
+}
+
+#lg_forget:hover{
+	background: url("../img/icon.png") -320px -344px;
+}
+
+#lg_registernew{
+	background: url("../img/icon.png") -256px -328px;
+	margin-left: 20px;  
+}
+
+#lg_registernew:hover{
+	background: url("../img/icon.png") -256px -344px;  
+}
+
+#rg_haveid{
+	background: url("../img/icon.png") -320px -360px;
+}
+
+#rg_haveid:hover{
+	background: url("../img/icon.png") -256px -360px;
+}
+
+.error{
+	color: #FF2020;
+}
+
+label.error{
+	margin-left: 5px;
+	font-size: 16px;
+}

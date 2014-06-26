@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  	<display-name>TrafficPlatform</display-name>
+  	<welcome-file-list>
+    	<welcome-file>index.html</welcome-file>
+    	<welcome-file>index.htm</welcome-file>
+    	<welcome-file>index.jsp</welcome-file>
+    	<welcome-file>default.html</welcome-file>
+    	<welcome-file>default.htm</welcome-file>
+    	<welcome-file>default.jsp</welcome-file>
+  	</welcome-file-list>
+  	<servlet>
+    	<description></description>
+        <display-name>LoginServlet</display-name>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>org.iii.esti.LoginServlet</servlet-class>
+	</servlet>
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/LoginServlet</url-pattern>
+    </servlet-mapping>
+    
+    <!-- ScheduleServlet setting-->
+    <servlet>
+        <servlet-name>ScheduleServlet</servlet-name>
+        <servlet-class>org.iii.esti.schedule.ScheduleServlet</servlet-class>
+    	<load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+    	<servlet-name>ScheduleServlet</servlet-name>
+        <url-pattern>/ScheduleServlet</url-pattern>
+    </servlet-mapping>
+	
+	<!-- ListServlet setting-->     
+    <servlet>
+    	<description></description>
+        <display-name>ListServlet</display-name>
+        <servlet-name>ListServlet</servlet-name>
+        <servlet-class>org.iii.esti.schedule.ListServlet</servlet-class>
+	</servlet>
+    <servlet-mapping>
+        <servlet-name>ListServlet</servlet-name>
+        <url-pattern>/ListServlet</url-pattern>
+    </servlet-mapping>
+    
+    <!-- proxool setting -->
+	<servlet>
+	  	<servlet-name>ServletConfigurator</servlet-name>
+	  	<servlet-class>org.logicalcobwebs.proxool.configuration.ServletConfigurator</servlet-class>
+	  	<init-param>
+	    	<param-name>xmlFile</param-name>
+	    	<param-value>WEB-INF/proxool.xml</param-value>
+	  	</init-param>
+	  	<load-on-startup>10</load-on-startup>
+	</servlet>
+    <!-- Proxool Admin -->
+	<!-- If you want to check database connection detail, just remove comment marks. -->
+	<!--
+	<servlet>
+		<servlet-name>proxool</servlet-name>
+	  	<servlet-class>org.logicalcobwebs.proxool.admin.servlet.AdminServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+	  	<servlet-name>proxool</servlet-name>
+	  	<url-pattern>/proxool</url-pattern>
+	</servlet-mapping>
+
+	<display-name>proxool</display-name>
+	
+	<servlet>
+		<servlet-name>Admin</servlet-name>
+		<servlet-class>org.logicalcobwebs.proxool.admin.servlet.AdminServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>Admin</servlet-name>
+		<url-pattern>/admin</url-pattern>
+	</servlet-mapping>
+	-->
+</web-app>

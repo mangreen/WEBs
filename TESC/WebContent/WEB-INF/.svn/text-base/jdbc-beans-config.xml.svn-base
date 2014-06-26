@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans 
+       http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+       
+    <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"  destroy-method="close">
+        <property name="driverClassName" value="com.sybase.jdbc3.jdbc.SybDriver" />
+        <property name="url" value="jdbc: sybase:Tds:140.122.66.170:1997/ntnutec?charset=big5" />
+        <property name="username" value="ntnutecown" />
+        <property name="password" value="ntnutec0907" />
+    </bean>
+    
+    <bean id="UserDAO" class="edu.ntnu.tesc.module.dao.UserDAO">
+        <property name="dataSource" ref="dataSource" />
+    </bean>
+    
+    <bean id="StageDAO" class="edu.ntnu.tesc.module.dao.StageDAO">
+        <property name="dataSource" ref="dataSource" />
+    </bean>
+    
+    <bean id="ConfigDAO" class="edu.ntnu.tesc.module.dao.ConfigDAO">
+        <property name="dataSource" ref="dataSource" />
+    </bean>
+    
+    <bean id="DepartmentDAO" class="edu.ntnu.tesc.module.dao.DepartmentDAO">
+        <property name="dataSource" ref="dataSource" />
+    </bean>
+    
+    <bean id="GrowlDAO" class="edu.ntnu.tesc.module.dao.GrowlDAO">
+        <property name="dataSource" ref="dataSource" />
+    </bean>
+    
+    <bean id="HistoryDAO" class="edu.ntnu.tesc.module.dao.HistoryDAO">
+        <property name="dataSource" ref="dataSource" />
+    </bean>
+    
+    <bean id="RoleDAO" class="edu.ntnu.tesc.module.dao.RoleDAO">
+        <property name="dataSource" ref="dataSource" />
+    </bean>
+    
+    <bean id="PrivilegeDAO" class="edu.ntnu.tesc.module.dao.PrivilegeDAO">
+        <property name="dataSource" ref="dataSource" />
+    </bean>
+    
+    <bean id="QeisBudgetYearDAO" class="edu.ntnu.tesc.module.dao.QeisBudgetYearDAO">
+        <property name="dataSource" ref="dataSource" />
+    </bean>
+    
+    <bean id="FlowModuleDAO" class="edu.ntnu.tesc.module.dao.FlowModuleDAO">
+        <property name="dataSource" ref="dataSource" />
+    </bean>
+    
+    <bean id="FlowDAO" class="edu.ntnu.tesc.module.dao.FlowDAO">
+        <property name="dataSource" ref="dataSource" />
+    </bean>
+    
+    <bean id="QeiiCommDAO" class="edu.ntnu.tesc.module.dao.QeiiCommDAO">
+        <property name="dataSource" ref="dataSource" />
+    </bean>
+    
+    <bean id="QeiiDAO" class="edu.ntnu.tesc.module.dao.QeiiDAO">
+        <property name="dataSource" ref="dataSource" />
+    </bean>
+    
+    <bean id="QeiiFileDAO" class="edu.ntnu.tesc.module.dao.QeiiFileDAO">
+        <property name="dataSource" ref="dataSource" />
+    </bean>
+    
+    <bean id="QeiiItemDAO" class="edu.ntnu.tesc.module.dao.QeiiItemDAO">
+        <property name="dataSource" ref="dataSource" />
+    </bean>
+    
+    <bean id="ZipDAO" class="edu.ntnu.tesc.module.dao.ZipDAO">
+        <property name="dataSource" ref="dataSource" />
+    </bean>
+    
+</beans>
+
+

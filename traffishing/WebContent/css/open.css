@@ -1,0 +1,119 @@
+@CHARSET "UTF-8";
+
+*{
+	margin:0px;
+	padding:0px;
+}
+ul, li, ol{
+	list-style:none;
+}
+body{
+	height:100%;
+}
+#open{
+	width:400px;
+	height:400px;
+	position:relative;
+	top:50%;
+	left:50%;
+	/*margin-top:-200px;*/
+	margin-left:-200px;
+}
+#rambow{
+	height:200px;
+	width:340px;
+	position:absolute;
+	top:0px;
+	left:0px;
+	z-index:1;
+	border:10px solid #000;
+	-webkit-border-top-left-radius:200px;
+	-webkit-border-top-right-radius:200px;
+	-webkit-border-bottom-left-radius:20px;
+	-webkit-border-bottom-right-radius:20px;
+	-moz-border-radius-topleft:200px;
+	-moz-border-radius-topright:200px;
+	-moz-border-radius-bottomleft:20px;
+	-moz-border-radius-bottomright:20px;
+	overflow:hidden;
+	background:#fff;
+	-webkit-box-shadow:0 0 15px #333;
+	-moz-box-shadow:0 0 15px #333;
+}
+#rambow li{
+	-webkit-border-radius:200px;
+	-moz-border-radius:200px;
+	position:absolute;
+	width:300px;
+	height:300px;
+}
+#rambow li#yellow{
+	border:20px orange solid;
+}
+#rambow li#green{
+	border:20px green solid;
+	width:250px;
+	top:25px;
+	left:25px;
+}
+#rambow li#red{
+	border:30px red solid;
+	width:180px;
+	top:50px;
+	left:50px;
+}
+#face{
+	background:#fff2c6;
+	height:160px;
+	width:195px;
+	border:10px solid #000;
+	-webkit-border-radius:200px 170px;
+	-moz-border-radius:200px;
+	position:absolute;
+	z-index:20;
+	top:80px;
+	left:73px;
+	-webkit-box-shadow:0 0 15px #333;
+	-moz-box-shadow:0 0 15px #333;
+}
+#face li{
+	position:absolute
+}
+li.eye{
+	width:40px;
+	height:40px;
+	-webkit-border-radius:20px;
+	-moz-border-radius:20px;
+	background:#000;
+	z-index:21;
+	position:absolute;
+	top:50px;
+}
+li.left{
+	left:25px;
+}
+li.right{
+	left:130px;
+}
+li#hana{
+	width:30px;
+	height:20px;
+	border:6px solid #000;
+	background:#630;
+	-webkit-border-radius:25px 20px;
+	-moz-border-radius:25px;
+	top:80px;
+	left:50%;
+	margin-left:-21px
+}
+li#kuchi{
+	border-bottom:8px solid #000;
+	-webkit-border-radius:100px;
+	-moz-border-radius:100px;
+	width:100px;
+	height:100px;
+	top:35px;
+	left:50%;
+	margin-left:-50px;
+}
+

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans 
+       http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+    <bean id="viewResolver"
+          class="org.springframework.web.servlet.view.InternalResourceViewResolver"> 
+        <property name="prefix" value="/WEB-INF/jsp/"/> 
+        <property name="suffix">
+            <value>.jsp</value>
+        </property>
+    </bean>
+    
+    <bean name="/login.do" 
+          class="edu.ntnu.tesc.controller.LoginController"> 
+        <property name="jsonPage"> 
+            <value>json</value> 
+        </property> 
+        <property name="modifyaccountPage"> 
+            <value>login\modify</value> 
+        </property>                         
+        <property name="userDAO" ref="UserDAO" />
+    </bean>    
+    
+    <bean name="/rolemanager.do" 
+          class="edu.ntnu.tesc.controller.TableDataManageController"> 
+        <property name="jsonPage"> 
+            <value>json</value> 
+        </property>
+        <property name="roleeditformPage"> 
+            <value>role\edit_roleform</value> 
+        </property>
+        <property name="privilegeeditformPage"> 
+            <value>priv\edit_privform</value> 
+        </property>
+        <property name="floweditformPage"> 
+            <value>flow\flow_module_editform</value> 
+        </property>
+        <property name="stageeditformPage"> 
+            <value>stage\stage_editform</value> 
+        </property>                              
+        <property name="growleditformPage"> 
+            <value>growl\growl_editform</value> 
+        </property>                                                                                           
+        <property name="configeditformPage"> 
+            <value>config\config_editform</value> 
+        </property>
+        <property name="qeiseditformPage"> 
+            <value>qeis\qeis_budget_year_editform</value> 
+        </property>
+        <property name="departeditformPage"> 
+            <value>department\department_editform</value> 
+        </property>                                                                                         
+        <property name="roleDAO" ref="RoleDAO" />
+        <property name="privilegeDAO" ref="PrivilegeDAO" />
+        <property name="flowDAO" ref="FlowDAO" />
+        <property name="flowModuleDAO" ref="FlowModuleDAO" />
+        <property name="stageDAO" ref="StageDAO" />
+        <property name="growlDAO" ref="GrowlDAO" />
+        <property name="configDAO" ref="ConfigDAO" />
+        <property name="qeisDAO" ref="QeisBudgetYearDAO" />
+        <property name="departmentDAO" ref="DepartmentDAO" />           
+        <!--        
+        <property name="historyDAO" ref="HistoryDAO" />        
+         -->
+   </bean>       
+    <bean name="/qeiimanager.do" 
+          class="edu.ntnu.tesc.controller.QEIIController"> 
+        <property name="jsonPage"> 
+            <value>json</value> 
+        </property>       
+    </bean>
+    
+    <bean name="/globalmanager.do" 
+          class="edu.ntnu.tesc.controller.GlobalFunctionController"> 
+        <property name="jsonPage"> 
+            <value>json</value> 
+        </property>
+        <property name="commonFeaturesPage" value="global\leftregular" /> 
+		<property name="loginPage" value="user\login" /> 
+        <property name="userDAO" ref="UserDAO" />                     
+        <property name="roleDAO" ref="RoleDAO" />
+        <property name="flowDAO" ref="FlowDAO" />
+        <property name="growlDAO" ref="GrowlDAO" />
+        <property name="configDAO" ref="ConfigDAO" />
+
+   </bean>          
+</beans>

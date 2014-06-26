@@ -1,0 +1,408 @@
+@CHARSET "UTF-8";
+
+html, body{
+	color: #FFF;
+	font-family: Arial, Verdana, sans-serif;
+	font-size: 1.0em;
+	line-height: 1.0em;
+	
+	height: 100%;
+	padding:0;
+	margin: 0;
+}
+
+a, input{
+	outline: none; /* for Firefox Google Chrome  */
+    behavior:expression(this.onFocus=this.blur()); /* for IE */
+}
+
+.error{
+	color: #FF0000;
+}
+
+/*Styles for fuzz overlay & message box*/  
+#fuzz{ 
+	position:absolute; 
+	top:0; 
+	left:0; 
+	width:100%; 
+	z-index:100; 
+	background: url("../images/dim.png"); 
+	display:none; 
+	text-align:left;
+}  
+      
+/*Message box, positioned in dead center of browser*/  
+.msgbox{ 
+	width:300px; 
+	height:200px; 
+	z-index:200; 
+	border:0px solid #000; 
+	background: #000;
+	
+	filter:alpha(opacity=90);
+	-moz-opacity:0.9;
+	opacity: 0.9; 
+	
+	position:absolute; 
+	top: 50%; 
+	left: 50%; 
+	margin-top: -100px; 
+	margin-left: -150px; 
+}  
+.msgbox img {
+	border:none;
+	margin:5px;
+}
+
+.msg{
+	margin-top:20px;
+	margin-left:20px;
+	margin-right:20px;
+}
+
+.msgbtn{
+	width:100%;
+	position:absolute;
+	bottom:20px;
+}
+
+/*The "X" in the upper right corner of msgbox  
+.close{  
+}*/
+/*確定*/
+.check.button{
+	background:url("../images/icon.png") -128px -32px;
+	float:right;
+	margin-right:20px;	/*距右多少*/
+}
+.check:hover.button{
+	background:url("../images/icon_hover.png") -128px -32px;
+}
+.check:active.button{
+	background:url("../images/icon_press.png") -128px -32px;
+}
+.check.disable{
+	background:url("../images/icon_disable.png") -128px -32px;
+	float:right;
+	margin-right:20px;/*距右多少*/
+	cursor:default
+}
+/*關閉*/
+.close.button{
+	background:url("../images/icon.png") -128px -0px;
+	float:right;
+	margin-right:20px;/*距右多少*/
+	
+}
+.close:hover.button{
+	background:url("../images/icon_hover.png") -128px -0px;
+}
+.close:active.button{
+	background:url("../images/icon_press.png") -128px -0px;
+}
+.close.disable{
+	background:url("../images/icon_disable.png") -128px -0px;
+	float:right;
+	margin-right:20px;/*距右多少*/
+	cursor:default
+}
+
+#searchbar-holder {
+	/*
+	width:100%;
+	height:30px;
+	background: url("../searchbar-background.png");
+	repeat: repeat-x;
+	*/
+	
+}
+
+#floater{
+	float:top; 
+	height:50%; 
+	margin-bottom:-400px;
+}
+
+#center{
+	
+	width:1000px;
+	height:800px;
+	margin:0 auto;
+	clear:both;
+	position:relative;
+		
+	background-color: #000;
+	border-radius:0.0px;
+	-moz-border-radius:0.0px; /* Firefox 3.6 and earlier */
+	filter:alpha(opacity=80);
+	-moz-opacity:0.8;
+	opacity: 0.8;
+	overflow-y:hidden;
+}
+
+#logo{
+	/*display:inline-block;*/
+	background:url("../images/logo.png") -0px -0px;
+	width:164px;
+	height:32px;
+	
+	position:absolute;
+	left:30px;
+	top:30px;
+}
+
+.button{
+	display:inline-block;
+	width:32px;
+	height:32px;
+	
+	line-height:32px;
+	padding-top: 0; 	/* 嚴格限定0 . 否则...*/
+	padding-bottom: 0; 	/* 同上 */
+	padding-left: 0px; /* 設定以免小圖示被文字覆盖掉.. padding-right 可設可不設.. */
+	overflow: hidden; 	/*某些情況會用到 */
+}
+
+.disable{
+	display:inline-block;
+	width:32px;
+	height:32px;
+	
+	line-height:32px;
+	padding-top: 0; 	/* 嚴格限定0 . 否则...*/
+	padding-bottom: 0; 	/* 同上 */
+	padding-left: 0px; /* 設定以免小圖示被文字覆盖掉.. padding-right 可設可不設.. */
+	overflow: hidden; 	/*某些情況會用到 */
+}
+
+#searchbar{
+	background:url("../images/searchbar.png") -0px -0px;
+	width:224px;
+	height:32px;
+	
+	float:right;
+	margin-right:10px;/*距右多少*/
+}
+#searchinput{
+	background-color: #000;
+	color: #FFF;
+	border:0px; 
+	width:160px;
+	margin-top:5px; 
+	margin-left:16px; 
+}
+#searchbtn.button{
+	background:url("../images/icon_nocircle.png") -64px -64px;
+	float:right;
+}
+#searchbtn:hover.button{
+	background:url("../images/icon_press_nocircle.png") -64px -64px;
+	float:right;
+}
+#searchbtn:active.button{
+	background:url("../images/icon_disable.png") -64px -64px;
+	float:right;
+}
+
+/*上捲*/
+#scroll_up.button{
+	background:url("../images/icon.png") -0px -96px;
+	float:left;
+}
+#scroll_up:hover.button{
+	background:url("../images/icon_hover.png") -0px -96px;
+}
+#scroll_up:active.button{
+	background:url("../images/icon_press.png") -0px -96px;
+}
+#scroll_up.disable{
+	background:url("../images/icon_disable.png") -0px -96px;
+	float:left;
+	cursor:default
+}
+
+/*下捲*/
+#scroll_down.button{
+	background:url("../images/icon.png") -32px -96px;
+	float:left;
+	margin-left:10px;/*距左多少*/
+}
+#scroll_down:hover.button{
+	background:url("../images/icon_hover.png") -32px -96px;
+}
+#scroll_down:active.button{
+	background:url("../images/icon_press.png") -32px -96px;
+}
+#scroll_down.disable{
+	background:url("../images/icon_disable.png") -32px -96px;
+	float:left;
+	margin-left:10px;/*距左多少*/
+	cursor:default
+}
+
+/*更新消息*/
+#news.button{
+	background:url("../images/icon.png") -0px -32px;
+	float:right;
+	margin-right:10px;/*距右多少*/
+}
+#news:hover.button{
+	background:url("../images/icon_hover.png") -0px -32px;
+}
+#news:active.button{
+	background:url("../images/icon_press.png") -0px -32px;
+}
+#news.disable{
+	background:url("../images/icon_disable.png") -0px -32px;
+	float:right;
+	margin-right:10px;/*距右多少*/
+	cursor:default
+}
+
+/*觀看log檔*/
+#log.button{
+	background:url("../images/icon.png") -96px -0px;
+	float:right;
+	margin-right:10px;/*距右多少*/
+}
+#log:hover.button{
+	background:url("../images/icon_hover.png") -96px -0px;
+}
+#log:active.button{
+	background:url("../images/icon_press.png") -96px -0px;
+}
+#log.disable{
+	background:url("../images/icon_disable.png") -96px -0px;
+	float:right;
+	margin-right:10px;/*距右多少*/
+	cursor:default
+}
+
+/*新增*/
+#add.button{
+	background:url("../images/icon.png") -0px -0px;/* 例如0px -32px 底圖往左移0px, 往上移32px */
+	float:right;
+	margin-right:10px;	/*距右多少*/
+}
+#add:hover.button{
+	background:url("../images/icon_hover.png") -0px -0px;
+}
+#add:active.button{
+	background:url("../images/icon_press.png") -0px -0px;
+}
+#add.disable{
+	background:url("../images/icon_disable.png") -0px -0px;
+	float:right;
+	margin-right:10px;	/*距右多少*/
+	cursor:default
+}
+
+/*編輯*/
+#edit.button{
+	background:url("../images/icon.png") -32px -0px;
+	float:right;
+	margin-right:10px;/*距右多少*/
+}
+#edit:hover.button{
+	background:url("../images/icon_hover.png") -32px -0px;
+}
+#edit:active.button{
+	background:url("../images/icon_press.png") -32px -0px;
+}
+#edit.disable{
+	background:url("../images/icon_disable.png") -32px -0px;
+	float:right;
+	margin-right:10px;/*距右多少*/
+	cursor:default
+}
+
+/*刪除*/
+#delete.button{
+	background:url("../images/icon.png") -64px -0px;
+	float:right;
+	margin-right:5px;/*距右多少*/
+}
+#delete:hover.button{
+	background:url("../images/icon_hover.png") -64px -0px;
+}
+#delete:active.button{
+	background:url("../images/icon_press.png") -64px -0px;
+}
+#delete.disable{
+	background:url("../images/icon_disable.png") -64px -0px;
+	float:right;
+	margin-right:5px;/*距右多少*/
+	cursor:default
+}
+
+#menu{
+	/*border: 1px solid gray;*/
+	position:absolute;
+	top:40px;
+	right:50px;
+	height:32px;
+	width:500px;
+}
+
+#slidelist{
+	position:absolute;
+	left:50px;
+	top:100px;
+	
+	width:25%;
+	/*
+	border-right-style:solid;
+	border-width:1px;
+	border-color:#4F4F4F;
+	*/
+	overflow-x:hidden;
+	overflow-y:hidden;
+}
+
+/*分隔線*/
+#demarcation{
+	position:absolute;
+	left:320px;
+	top:100px;
+	width:0px;
+	height:650px;
+	background':'#ebd9b3;
+	border-style:solid;
+	border-width:1px;
+	border-color:#ebd9b3;
+}
+#content{
+	position:absolute;
+	left:370px;
+	top:100px;
+	
+	width:560px;
+	/*height:650px;*/
+	/*
+	border-style:solid;
+	border-width:1px;
+	border-color:#4F4F4F;
+	*/
+	overflow-x:hidden;
+	overflow-y:hidden;
+}
+
+#copyright{
+	font-size: 0.6em;
+	color:#000000;
+	position:absolute;
+	right:0;
+	bottom:0;
+}
+
+#feedback { font-size: 1.4em; }
+#selectable .ui-selecting { background: #FECA40; }
+#selectable .ui-selected { background: #F39814; color: white; }
+#selectable { list-style-type: none; margin: 0; padding: 0; width: 100%; }
+#selectable li { margin: 3px; padding: 0.4em; font-size: 1.0em; height: 18px; }
+.ui-widget-content {
+    background: url("images/ui-bg_highlight-soft_100_eeeeee_1x100.png") repeat-x scroll 50% top #EEEEEE;
+    border: 1px solid #DDDDDD;
+    color: #333333;
+}

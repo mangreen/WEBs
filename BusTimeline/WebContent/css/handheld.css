@@ -1,0 +1,421 @@
+@CHARSET "UTF-8";
+
+html, body{
+	font-family: 'Open Sans', Arial, 微軟正黑體;
+	background: #00123F;
+	margin: 0;
+  	padding: 0;
+}
+
+a{
+	text-decoration: none;
+}
+
+.btn{
+	outline:none;/*移除對焦框*/
+	cursor: pointer;
+}
+
+#loading{
+	/*background: url("../img/loading.jpg");*/
+	width: 100%;
+	height: 100%;
+	
+	z-index:999;
+	float: left;
+}
+
+#load_span{
+	display: block;
+	width: 100%;
+	height: 100%;
+	
+	font-size: 32px;
+	color: #ffffff;
+	
+	line-height: 820px;
+	text-align: center;
+	display: none;
+}
+
+#warning{
+	/*background: url("../img/Warning.jpg");*/
+	width: 100%;
+	height: 100%;
+	
+	z-index:999;
+	float: left;
+	display:none;
+}
+
+#warn_span{
+	display: block;
+	width: 100%;
+	height: 100%;
+	
+	font-size: 32px;
+	color: #ffffff;
+	
+	line-height: 820px;
+	text-align: center;
+}
+
+#main{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	
+	width: 100%;
+	height: 100%;
+	
+	display: none;
+}
+
+#operate{
+	width: 100%;
+	height: 100%;
+}
+
+#explain{
+
+	display: none;
+}
+
+#routelist{
+	background: #000000;
+	
+	width: 100%;
+	height: 100%;
+	
+	float: left;
+	overflow: hidden;
+}
+
+.routegroup{
+	background: yellow;
+	width: 100%;
+	height: 100%;
+	display: none;
+}
+
+.routediv{
+	background: #00123F;
+
+	width: 100%;
+	height: 100%;
+	
+	display: block;
+	float:right;
+	margin-top: 2px;
+}
+
+.route_content{
+	width: 100%;
+	height: 100%;
+	
+	float: left;
+	overflow: hidden;
+}
+
+.route_bar{
+	width: 100%;
+	/*height: 15%;*/
+	color: #ffffff;
+	float: left;
+	white-space: nowrap;
+	overflow: hidden;
+	
+	position: fixed;
+}
+
+.r_light{
+	background: #00EE00;
+	
+	width: 16px;
+	height: 16px;
+	
+	float: left;
+	position: relative; 
+	top: 18px; 
+	left: 10px;
+}
+
+.route_span{
+	font-size: 30px;
+	position: relative; 
+	top: 0px; 
+	left: 30px;
+}
+
+.est_time_bar{
+	/*height: 15%;*/
+	color: #ffffff;
+	font-size: 20px;
+	
+	position: fixed;
+	top: 40px;
+}
+
+.e_time{
+	
+}
+
+.stand_line{
+	height: 100%;
+	float: left;
+	
+	position: relative; 
+	top: 90px; 
+	/*overflow: hidden;*/
+	cursor: pointer;
+	/*
+	display:inline;
+	white-space:nowrap;*/
+}
+
+.stand{
+	width: 28px;
+	height: 100%;
+
+	display: inline-block;
+	float:left;
+	
+	overflow: hidden;
+}
+
+.circle{
+	/*background: #87CEEB;*/
+	width: 28px;
+	height: 28px;
+	
+	color: #00008B;
+	text-align: center;
+}
+
+.cpast{
+	background: #D3D3D3;
+	/*border:1px solid gray;*/
+}
+
+.cnow{
+	background: #FFC1C1;
+	/*border:1px solid red;*/
+}
+
+.cnext{
+	background: #87CEEB;
+	/*border:1px solid blue;*/
+	font-size: 16px;
+}
+
+.stand_span{
+	background: red;
+	color: #ffffff;
+	width: 20px;
+	display: block;
+	
+	font-size: 20px;
+	margin: 0 auto;
+	/*writing-mode: tb-rl;*/
+	/*text-align: center;*/
+	/*-webkit-writing-mode: vertical-rl;　(由右至左直排)*/
+	/*-webkit-writing-mode: vertical-lr;　(由左至右直排)*/
+	/*-webkit-writing-mode: horizontal-tb;　(橫寫)*/
+}
+
+.midway{
+	background: #0068b7;
+	float:left;
+	
+	width: 60px;
+	height: 28px;
+	
+	display: inline-block;
+}
+
+.mpast{
+	background: gray;
+}
+
+.mpast_bus{
+	background: #E6E6FA;
+}
+
+.mnext{
+	background: #0068b7;
+}
+
+.mnext_bus{
+	background: #00BFFF;
+}
+
+.routemove{
+	background: #003366;
+
+	width: 100%;
+	height: 20px;
+	/*float: right;*/
+	
+	display: block;
+	position: fixed;
+	top: 70px; 
+}
+
+.arrowleft{
+	background: #0068b7;
+	
+	width: 49%;
+	height: 100%;
+	/*margin-top: 2px;*/
+	float: left;
+	display: inline-block;
+}
+
+.arrowright{
+	background: #0068b7;
+	
+	width: 49%;
+	height: 100%;
+	float: right;
+	display: inline-block;
+}
+
+#namelist{
+	/*background: #003366;*/
+	width: 100%;
+	height: 100%;
+	
+	float: right;
+	/*overflow: hidden;*/
+}
+
+.namemove{
+	background: #003366;
+
+	width: 100%;
+	height: 9%;
+	display: none;
+}
+
+.arrowup{
+	background: #0068b7;
+	
+	width: 49%;
+	height: 100%;
+	
+	display: inline-block;
+}
+
+.arrowdown{
+	background: #0068b7;
+	
+	width: 49%;
+	height: 100%;
+	display: inline-block;
+}
+
+#namedrop{
+	width: 100%;
+	height: 100%;
+	
+	/*overflow: hidden;*/
+}
+
+.namegroup{
+	background: yallow;
+	width: 100%;
+	height: 77px;
+	margin-top: 1px;
+}
+
+.namebtn{
+	background: url("../img/hand/number_btn_press.png") no-repeat right center;
+	/*background: #0068b7;*/
+	
+	width: 100%;
+	height: 77px;
+	margin-top: 1px;
+	
+	overflow:hidden;          /*超出部分隐藏*/
+}
+
+.b_press{
+	background: url("../img/hand/number_btn_press.png");
+	/*background: #00008B;*/
+}
+
+.n_light{
+	background: #00EE00;
+	
+	width: 16px;
+	height: 16px;
+	
+	float: left;
+	position: relative; 
+	top: 30px; 
+	left: 10px;
+}
+
+.l_on{
+	background: #00EE00;
+}
+
+.l_leave{
+	background: #FFD700;
+}
+
+.l_off{
+	background: #FF0000;
+}
+
+.n_span{
+	background: url("../img/hand/number_btn_press.png") no-repeat left center;
+	position: relative; 
+	left: 20px;
+	
+	color: #ffffff;
+	font-size: 48px;
+	
+	display: block;
+	width: 88%;
+	height: 77px;
+	line-height: 77px;
+	text-align: center;
+	
+	white-space: nowrap;
+	overflow:hidden;          /*超出部分隐藏*/
+}
+
+.name_a{
+	
+	background: green;
+	
+	display: block;
+	margin: 0 auto;
+	
+	width: 100%;
+	height: 100%;
+	
+	font-size: 48px;
+	color: #ffffff;
+	text-align: center;
+	vertical-align:middle;
+
+}
+
+.name_span{
+
+	background: red;
+	
+	font-size: 48px;
+	color: #ffffff;
+	text-align: center;
+	
+	width: 100%;
+	height: 100%;
+	
+	position: relative; 
+	top: 10px; 
+	left: 30px;
+
+}

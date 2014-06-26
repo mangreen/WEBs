@@ -1,0 +1,392 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" charset="UTF-8"/>
+<meta http-equiv="Cache-Control" content="no-cache">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0"> 
+
+<link rel="shortcut icon" href="img/favicon.ico">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="css/main.css" />
+<link rel="stylesheet" type="text/css" href="css/fish.css" />
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript">window.jQuery || document.write('<script type="text/javascript" src="js/libs/jquery-1.7.1.min.js">\x3C/script>')</script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.13/jquery-ui.min.js"></script>
+<script type="text/javascript">window.jQuery || document.write('<script type="text/javascript" src="js/libs/jquery-ui-1.8.13.min.js">\x3C/script>')</script>
+
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+<script type="text/javascript" src="js/plugin.scrollbar.js"></script>
+
+<script type="text/javascript" src="js/jquery.mousewheel.js"></script>
+<script type="text/javascript" src="js/infobubble-compiled.js"></script>
+<script type="text/javascript" src="js/StyledMarker.js"></script>
+
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/map.js"></script>
+
+</head>
+<body onload="initialize()">
+	<div id="lg_dim" class="dim">  
+		<div class="login_tile">
+			<a id="lg_x" title="關閉" class="lg_x btn" href="#"></a>
+			<div id="login_span"></div>
+			<div class="lg_s_position separator"></div>
+
+			<form id="login_form" method="post">
+					<p>
+						<span id="lg_mail" class="lg_mail_span"></span>
+					    <input id="lg_mail_input" class="lg_input" name="lg_mail_input"/>
+				  	</p>
+					<p>
+						<span id="lg_pw" class="lg_pw_span"></span>
+					    <input id="lg_pw_input" class="lg_input" name="lg_pw_input"/>
+				  	</p>
+					<p>
+				  		<input id="rme" type="checkbox" name="rme"/><span id="lg_rme" class="rme_span"></span>
+				  	</p>
+					<p>
+				  		
+				  	</p>
+					<p>
+							<a id="lg_login" title="登入" class="btn lg_btn" href="#"><span id="lg_login_img" class="lg_btn_img"></span></a>
+				  	</p>
+					<p>
+					
+					</p>
+					<p>
+							<a id="lg_forget" title="忘記密碼" class="btn lg_a" href="#"></a><a id="lg_registernew" title="申請帳號" class="btn lg_a" href="#"></a>
+				  	</p>
+
+			</form>
+
+		</div>  
+	</div>
+	
+	<div id="rg_dim" class="dim">  
+		<div class="register_tile">
+			<a id="rg_x" title="關閉" class="lg_x btn" href="#"></a>
+			<div id="register_span"></div>
+			<div class="lg_s_position separator"></div>
+
+			<form id="register_form" method="post">
+					<p>
+						<span id="rg_nickname" class="lg_nn_span"></span>
+					    <input id="rg_nn_input" class="lg_input" name="rg_nn_input"/>
+				  	</p>
+					<p>
+						<span id="rg_mail" class="lg_mail_span"></span>
+					    <input id="rg_mail_input" class="lg_input" name="rg_mail_input"/>
+				  	</p>
+					<p>
+						<span id="rg_pw" class="lg_pw_span"></span>
+					    <input id="rg_pw_input" class="lg_input" name="rg_pw_input"/>
+					    <span id="rg_pw_limit" class="rg_pw_limit">(長度最少8位元)</span>
+				  	</p>
+					<p>
+				  		<span id="rg_pw_confirm" class="lg_pw_cf_span"></span>
+					    <input id="rg_pwcf_input" class="lg_input" name="rg_pwcf_input"/>
+				  	</p>
+				  	<p>
+				  		<input id="readservice" type="checkbox" name="readservice"/><span id="lg_readservice" class="readservice_span"></span>
+				  	</p>
+					<p>
+				  		
+				  	</p>
+					<p>
+							<a id="rg_register" title="註冊" class="btn lg_btn" href="#"><span id="lg_register_img" class="lg_btn_img"></span></a>
+				  	</p>
+					<p>
+					
+					</p>
+					<p>
+							<a id="rg_haveid" title="已有帳號" class="btn lg_a" href="#"></a>
+				  	</p>
+
+			</form>
+
+		</div>  
+	</div>  
+
+	<div id="act_dim" class="dim">  
+		<div class="act_tile">
+			<a id="act_x" title="關閉" class="lg_x btn" href="#"></a>
+			<div id="a" class="act_img_box">
+				<a id="b" class="act_img_btn" href="#"><img src="img/004.jpg" width="800" height="564" class="act_img"></a>
+			</div>
+			<table id="act_table" class="act_table" cellspacing="0">
+				<tbody>
+					<tr>
+						<th colspan=2 class="act_th">
+						秋高氣爽席哈品酒會
+						</th>
+					</tr>
+					<tr>
+						<td colspan=2 class="act_ab">
+						本店新酒上市舉辦品酒會，當天會搭配在10種不同口味的香腸，生菜沙拉和 Cheese 當晚餐。四點前至本店消費8折優待，請把握機會。
+						</td>
+					</tr>
+					<tr>
+					    <td class="act_td"><span class="act_span act_name_span"></span></td>
+					    <td class="act_td"><span id="act_name" class="act_name">驢子餐廳</span></td>
+				  	</tr>
+				  	<tr>
+					    <td class="act_td"><span class="act_span act_time_span"></span></td>
+					    <td class="act_td"><span id="act_time" class="">2012/10/24 10:00</span></td>
+				  	</tr>
+				  	<tr>
+					    <td class="act_td"><span class="act_span act_adress_span"></span></td>
+					    <td class="act_td"><span id="act_adress" class="">台北市大同區酒泉街123號</span></td>
+				  	</tr>
+				  	<tr>
+					    <td class="act_td"><span class="act_span act_phone_span"></span></td>
+					    <td class="act_td"><span id="act_phone" class="">02-2545-6966</span></td>
+				  	</tr>
+				  	<tr>
+					    <td class="act_td"><span class="act_span act_mail_span"></span></td>
+					    <td class="act_td"><span id="act_mail" class="act_mail">lidiot.tw@gmail.com</span></td>
+				  	</tr>
+				  	<tr>
+					    <td class="act_td"><span class="act_span act_web_span"></span></td>
+					    <td class="act_td"><a class="act_web" href="http://www.lidiot.com.tw">http://www.lidiot.com.tw</a></td>
+				  	</tr>
+				  	
+				</tbody>
+			</table>
+			
+		</div>  
+	</div>
+
+	<div id="toolbar">
+		<a id="logo" title="Home" class="logo" href="#"></a>
+		<div class="lfloat">
+			<a id="route_now" title="route" class="button" href="#"><span id="route_arrow" class="downarrow"></span><span id="routename">上下班路線</span></a>
+			
+			
+					<ul id="route_menu" class="tag_options" >
+							
+						<li class="route_opt" style="">	
+							<a class="route_btn" href="#">
+								<span class="route_name">Türk?e</span>
+								<span class="countwrap">
+									<span class="route_count traf_count">1</span>
+									<span class="route_count poi_count">2</span>
+								</span>
+							</a>
+							<a class="button route_tool" href="#"></a>
+							<ul class="rttl_menu">
+								<li class="liopt rttl_opt">編輯</li>
+								<li class="liopt rttl_opt">刪除</li>
+							</ul>
+						</li>
+						<li class="li_line" style=""><div class="separator"></div></li>
+						<li id="route_new" class="liopt" style="">新增路線</li>
+						<li class="liopt" style="">English</li>
+						<li class="liopt" style="">简体中文</li>
+						<li class="liopt" style="">日本語</li>
+						<li class="liopt" style="">Deutsch</li>
+						<li class="liopt" style="">Espa?ol</li>
+						<li class="liopt" style="">Fran?ais</li>
+						<li class="liopt" style="">Italiano</li>
+						<li class="liopt" style="">Polski</li>
+						<li class="liopt" style="">Português</li>
+						<li class="liopt" style="">Svenska</li>
+						<li class="liopt" style="">Руccкий</li>
+						
+					</ul>
+		
+		</div>
+		<table id="searchfloat" cellspacing="0">
+			<tbody>
+				<tr id="searchbar">
+				    <td><input id="searchinput" name="searchinput"/></td>
+				    <td>
+				    	<a id="searchbtn" title="Search" class="iconbtn" href="#"></a>
+				    </td>
+			  	</tr>
+			</tbody>
+		</table>
+		<div class="rfloat">
+			<table id="signin" cellspacing="0">
+				<tbody>
+					<tr>
+					    <td><a id="login" title="登入" class="btn" href="#"></a></td>
+					    <td><span class="gbts"></span></td>
+					    <td><a id="register" title="註冊" class="btn" href="#"></a></td>
+				  	</tr>
+				</tbody>
+			</table>
+		
+			<a id="username" title="username" class="button" href="#">username</a>
+			<ul id="user_menu" class="tag_options">
+				<li class="liopt user_opt" style="">帳號設定</li>
+				<li class="liopt user_opt" style="">登出</li>
+			</ul>
+		</div>
+	</div>
+	<div id="traf_tile" class="tile">
+		<a id="traf_btn" class="btn tile_btn" href="#"></a>
+		<a id="traf_pin" title="地圖顯示選項" class="btn pin_btn" href="#"></a>
+		<a id="traf_event" title="事件清單" class="btn event_btn " href="#"></a>
+		<div id="traf_check_float" class="check_div">
+			<table id="traf_check_table" class="check_table" cellspacing="5">
+				<tbody>
+					<tr>
+						<td><input id="weekday0" type="checkbox" name="weekday"/></td>
+						<td><a id="event" href="#"></a></td>
+						<td>&nbsp;&nbsp;</td>
+						<td><input id="weekday1" type="checkbox" name="weekday"/></td>
+						<td><a id="speed" href="#"></a></td>
+						<td>&nbsp;&nbsp;</td>
+						<td><input id="weekday2" type="checkbox" name="weekday"/></td>
+						<td><a id="park" href="#"></a></td>
+						<td>&nbsp;</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		
+	</div>
+	<div id="poi_tile" class="tile">
+		<a id="poi_btn" class="btn tile_btn" href="#"></a>
+		<a id="poi_pin" title="地圖顯示選項" class="btn pin_btn" href="#"></a>
+		<a id="poi_event" title="事件清單" class="btn event_btn" href="#"></a>
+		<div id="poi_check_float" class="check_div">
+			<table id="poi_check_table" class="check_table" cellspacing="5">
+				<tbody>
+					<tr>
+						<td><input id="poi0" type="checkbox" name="weekday"/></td>
+						<td><a id="happy" href="#"></a></td>
+						<td>&nbsp;&nbsp;</td>
+						<td><input id="poi1" type="checkbox" name="weekday"/></td>
+						<td><a id="food" href="#"></a></td>
+						<td>&nbsp;&nbsp;</td>
+						<td><input id="poi2" type="checkbox" name="weekday"/></td>
+						<td><a id="live" href="#"></a></td>
+						<td>&nbsp;&nbsp;</td>
+						<td><input id="poi4" type="checkbox" name="weekday"/></td>
+						<td><a id="move" href="#"></a></td>
+						<td>&nbsp;</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+	
+	<div id="list_tile">
+		<span id="list_span"></span>
+		<div class="separator"></div>
+		<div id="traf_list">
+			<div class="iA">
+				<div class="iB"><span class="sdt"><span class="sD">2011/11/23</span>  -  <span class="sT">15:26</span></span></div>
+				<div class="iC">
+					<div class="iD"><a class="poiimg" href="#"></a><span  class="poiname">BRAND NAME</span></div>
+					<div class="iF">
+						
+						<div class="iG">
+						"Photographers like to critique photos – deliberately pointing out how the photo could have been improved by this or that. But what percentage of the time do we look at a photo and allow ourselves to get lost in it? How often do we take a moment to really evaluate what the creator intended to communicate?"
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="separator"></div>
+			
+			<div class="iA">
+				<div class="iB"><span class="sdt"><span class="sD">2011/11/23</span>  -  <span class="sT">15:26</span></span></div>
+				<div class="iC">
+					<div class="iD"><a class="poiimg" href="#"></a><span class="poiname">BRAND NAME</span></div>
+					<div class="iF">
+						
+						<div class="iG">
+						"Photographers like to critique photos – deliberately pointing out how the photo could have been improved by this or that."
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="separator"></div><div class="iA">
+				<div class="iB"><span class="sdt"><span class="sD">2011/11/23</span>  -  <span class="sT">15:26</span></span></div>
+				<div class="iC">
+					<div class="iD"><a class="poiimg" href="#"></a><span  class="poiname">BRAND NAME</span></div>
+					<div class="iF">
+						
+						<div class="iG">
+						"Photographers like to critique photos"
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="separator"></div><div class="iA">
+				<div class="iB"><span class="sdt"><span class="sD">2011/11/23</span>  -  <span class="sT">15:26</span></span></div>
+				<div class="iC">
+					<div class="iD"><a class="poiimg" href="#"></a><span  class="poiname">BRAND NAME</span></div>
+					<div class="iF">
+						
+						<div class="iG">
+						"Photographers like to critique photos – deliberately pointing out how the photo could have been improved by this or that. But what percentage of the time do we look at a photo and allow ourselves to get lost in it? How often do we take a moment to really evaluate what the creator intended to communicate?"
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="separator"></div><div class="iA">
+				<div class="iB"><span class="sdt"><span class="sD">2011/11/23</span>  -  <span class="sT">15:26</span></span></div>
+				<div class="iC">
+					<div class="iD"><a class="poiimg" href="#"></a><span  class="poiname">BRAND NAME</span></div>
+					<div class="iF">
+						
+						<div class="iG">
+						"Photographers like to critique photos – deliberately pointing out how the photo could have been improved by this or that. But what percentage of the time do we look at a photo and allow ourselves to get lost in it? How often do we take a moment to really evaluate what the creator intended to communicate?"
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="separator"></div><div class="iA">
+				<div class="iB"><span class="sdt"><span class="sD">2011/11/23</span>  -  <span class="sT">15:26</span></span></div>
+				<div class="iC">
+					<div class="iD"><a class="poiimg" href="#"></a><span class="poiname">BRAND NAME</span></div>
+					<div class="iF">
+						
+						<div class="iG">
+						"Photographers like to critique photos – deliberately pointing out how the photo could have been improved by this or that. But what percentage of the time do we look at a photo and allow ourselves to get lost in it? How often do we take a moment to really evaluate what the creator intended to communicate?"
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="separator"></div><div class="iA">
+				<div class="iB"><span class="sdt"><span class="sD">2011/11/23</span>  -  <span class="sT">15:26</span></span></div>
+				<div class="iC">
+					<div class="iD"><a class="poiimg" href="#"></a><span class="poiname">BRAND NAME</span></div>
+					<div class="iF">
+						
+						<div class="iG">
+						"Photographers like to critique photos – deliberately pointing out how the photo could have been improved by this or that. But what percentage of the time do we look at a photo and allow ourselves to get lost in it? How often do we take a moment to really evaluate what the creator intended to communicate?"
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="separator"></div><div class="iA">
+				<div class="iB"><span class="sdt"><span class="sD">2011/11/23</span>  -  <span class="sT">15:26</span></span></div>
+				<div class="iC">
+					<div class="iD"><a class="poiimg" href="#"></a><span class="poiname">BRAND NAME</span></div>
+					<div class="iF">
+						
+						<div class="iG">
+						"Photographers like to critique photos – deliberately pointing out how the photo could have been improved by this or that. But what percentage of the time do we look at a photo and allow ourselves to get lost in it? How often do we take a moment to really evaluate what the creator intended to communicate?"
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="separator"></div>
+		</div>
+	</div>
+	<div id="map_canvas" style="width:100%; height:100%"></div>
+</body>
+</html>

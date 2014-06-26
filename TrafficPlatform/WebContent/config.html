@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Schedule Config Page</title>
+</head>
+<body>
+<form id="scheduleform" class="cmxform" method="post">
+	<p><input id="statuscheck" type="checkbox" name="statuscheck"/>&nbsp;Active<br/></p>
+	<p><label for="nameinput">Name:</label> <input type="text" id="nameinput" name="nameinput" value=""/> </p>
+	<p><label for="programinput">Program:</label> <input type="text" id="programinput" name="programinput" value=""/></p>
+	<p>
+		<label for="startdate">Start from:</label>	
+		<label id="startdatelabel" for="startdate" class="dateicon"></label><input id="startdate" name="startdate" class="datepicker" type="text">
+		<label id="starttimelabel" for="starttime" class="timeicon"></label><input id="starttime" name="starttime" class="timepicker" type="text">
+	</p>
+	<p>
+		<input id="endcheck" type="checkbox" name="endcheck"/>
+		<label for="endlabel">End up in:</label>
+		<label id="enddatelabel" for="enddate" class="dateicon"></label><input id="enddate" name="enddate" class="datepicker" type="text">
+		<label id="endtimelabel" for="endtime" class="timeicon"></label><input id="endtime" name="endtime" class="timepicker" type="text">
+	</p>
+	<fieldset>
+		<legend>Circulation</legend>
+		<p><input type="radio" id="interval" name="circulation" value="interval">&nbsp;Interval</p>
+		<p>
+			&nbsp;&nbsp;&nbsp;Every
+			<input type="text" id="intervalinput" name="intervalinput" value=""/>
+			<select id="intervalselect" name="intervalselect">
+				<option value=""></option>
+				<option value="m">Minutes</option>
+				<option value="h">Hours</option>
+				<option value="d">Days</option>
+				<option value="w">Weeks</option>
+				<option value="M">Months</option>
+			</select>
+		</p>
+		<hr/>
+		<p><input type="radio" id="weekday" name="circulation" value="weekday">&nbsp;Every Week</p>
+		<p>
+			&nbsp;&nbsp;
+			<input id="weekday0" type="checkbox" name="weekday"/><label class="weekday">Sun</label>
+			<input id="weekday1" type="checkbox" name="weekday"/><label class="weekday">Mon</label>
+			<input id="weekday2" type="checkbox" name="weekday"/><label class="weekday">Tue</label>
+			<input id="weekday3" type="checkbox" name="weekday"/><label class="weekday">Wed</label>
+			<input id="weekday4" type="checkbox" name="weekday"/><label class="weekday">Thu</label>
+			<input id="weekday5" type="checkbox" name="weekday"/><label class="weekday">Fri</label>
+			<input id="weekday6" type="checkbox" name="weekday"/><label class="weekday">Sat</label>
+		</p>
+		<hr/>
+		<p><input type="radio" id="monthdate" name="circulation" value="monthdate">&nbsp;Every Month</p>
+		<p>
+			&nbsp;&nbsp;&nbsp;The
+			<input type="text" id="dateinput" name="dateinput" value=""/>&nbsp;of Each Month
+		</p>
+	</fieldset>
+	<p>
+		<a id="cancel" title="Cancel" class="button" href="#"></a>
+		<a id="confirm" title="Confirm" class="button" href="#"></a>
+	</p>
+</form>
+</body>
+</html>

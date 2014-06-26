@@ -1,0 +1,26 @@
+<html>
+<p>[2011/06/03]</p>
+<p>Schedule Ver. 1.0 released.</p>
+<hr/>
+<p>[2011/06/03]</p>
+<p>Schedule Ver. 1.0 released.</p>
+<hr/>
+<p>[2011/06/23]</p>
+<p>Schedule Ver. 1.1 released.</p>
+<p><br/>What's New in The Version 1.1 Release.¡G</p>
+<p>
+* Fix a bug of when Edit cancel, the content didn't recover.
+</p>
+<hr/>
+<p>[2011/06/22]</p>
+<p>THE Schedule Ver. 1.0 RELEASED.</p>
+<p><br/>What's New in The Version 1.0 Release.¡G</p>
+<p>
+* Search function completed.
+<br/>* Add function completed.
+<br/>* Delete function completed.
+<br/>* Edit function completed.
+<br/>* Read function completed.
+<br/>* The tutorial page completed.
+<br/>* The news page completed.
+</p>

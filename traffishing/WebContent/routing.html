@@ -1,0 +1,218 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" charset="UTF-8"/>
+<meta http-equiv="Cache-Control" content="no-cache">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0"> 
+
+<link rel="shortcut icon" href="img/favicon.ico">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="css/main.css" />
+<link rel="stylesheet" type="text/css" href="css/routing.css" />
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript">window.jQuery || document.write('<script type="text/javascript" src="js/jquery-1.7.1.min.js>\x3C/script>')</script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.13/jquery-ui.min.js"></script>
+<script type="text/javascript">window.jQuery || document.write('<script type="text/javascript" src="js/jquery-ui-1.8.13.min.js">\x3C/script>')</script>
+
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+<script type="text/javascript" src="js/plugin.scrollbar.js"></script>
+<script type="text/javascript" src="js/jquery.mousewheel.js"></script>
+<script type="text/javascript" src="js/infobubble-compiled.js"></script>
+<script type="text/javascript" src="js/StyledMarker.js"></script>
+<script type="text/javascript" src="js/jquery.validate.js"></script>
+
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/map.js"></script>
+<script type="text/javascript" src="js/routing.js"></script>
+<style>
+/*
+	ul { list-style-type: none; margin: 0; padding: 0; margin-bottom: 10px; }
+	li { width: 100%; }
+*/
+</style>
+<script>
+	$(function() {
+		
+	});
+</script>
+
+</head>
+<body onload="initialize()">
+	<div id="lg_dim" class="dim">  
+		<div class="login_tile">
+			<a id="lg_x" title="關閉" class="lg_x btn" href="#"></a>
+			<div id="login_span"></div>
+			<div class="lg_s_position separator"></div>
+
+			<form id="login_form" method="post">
+					<p>
+						<span id="lg_mail" class="lg_mail_span"></span>
+					    <input id="lg_mail_input" class="lg_input" name="lg_mail_input"/>
+				  	</p>
+					<p>
+						<span id="lg_pw" class="lg_pw_span"></span>
+					    <input id="lg_pw_input" class="lg_input" name="lg_pw_input"/>
+				  	</p>
+					<p>
+				  		<input id="rme" type="checkbox" name="rme"/><span id="lg_rme" class="rme_span"></span>
+				  	</p>
+					<p>
+				  		
+				  	</p>
+					<p>
+							<a id="lg_login" title="登入" class="btn lg_btn" href="#"><span id="lg_login_img" class="lg_btn_img"></span></a>
+				  	</p>
+					<p>
+					
+					</p>
+					<p>
+							<a id="lg_forget" title="忘記密碼" class="btn lg_a" href="#"></a><a id="lg_registernew" title="申請帳號" class="btn lg_a" href="#"></a>
+				  	</p>
+
+			</form>
+
+		</div>  
+	</div>
+	
+	<div id="rg_dim" class="dim">  
+		<div class="register_tile">
+			<a id="rg_x" title="關閉" class="lg_x btn" href="#"></a>
+			<div id="register_span"></div>
+			<div class="lg_s_position separator"></div>
+
+			<form id="register_form" method="post">
+					<p>
+						<span id="rg_nickname" class="lg_nn_span"></span>
+					    <input id="rg_nn_input" class="lg_input" name="rg_nn_input"/>
+				  	</p>
+					<p>
+						<span id="rg_mail" class="lg_mail_span"></span>
+					    <input id="rg_mail_input" class="lg_input" name="rg_mail_input"/>
+				  	</p>
+					<p>
+						<span id="rg_pw" class="lg_pw_span"></span>
+					    <input id="rg_pw_input" class="lg_input" name="rg_pw_input"/>
+					    <span id="rg_pw_limit" class="rg_pw_limit">(長度最少8位元)</span>
+				  	</p>
+					<p>
+				  		<span id="rg_pw_confirm" class="lg_pw_cf_span"></span>
+					    <input id="rg_pwcf_input" class="lg_input" name="rg_pwcf_input"/>
+				  	</p>
+				  	<p>
+				  		<input id="readservice" type="checkbox" name="readservice"/><span id="lg_readservice" class="readservice_span"></span>
+				  	</p>
+					<p>
+				  		
+				  	</p>
+					<p>
+							<a id="rg_register" title="註冊" class="btn lg_btn" href="#"><span id="lg_register_img" class="lg_btn_img"></span></a>
+				  	</p>
+					<p>
+					
+					</p>
+					<p>
+							<a id="rg_haveid" title="已有帳號" class="btn lg_a" href="#"></a>
+				  	</p>
+
+			</form>
+
+		</div>  
+	</div>  
+
+	<div id="toolbar">
+		<a id="logo" title="Home" class="logo" href="#"></a>
+		<div class="lfloat">
+
+			<table id="newroute_table" cellspacing="0">
+				<tbody>
+					<tr>
+					    <td><input id="nr_input" name="nr_input"/></td>
+					    <td><a id="nr_btn_save" title="儲存" class="btn nr_btn" href="#"><span id="nr_s_img" class="nr_img"></span></a></td>
+					    <td><a id="nr_btn_leave" title="離開" class="btn nr_btn" href="#"><span id="nr_l_img" class="nr_img"></span></a></td>
+				  	</tr>
+				</tbody>
+			</table>
+		</div>
+		<table id="searchfloat" cellspacing="0">
+			<tbody>
+				<tr id="searchbar">
+				    <td><input id="searchinput" name="searchinput"/></td>
+				    <td>
+				    	<a id="searchbtn" title="Search" class="iconbtn" href="#"></a>
+				    </td>
+			  	</tr>
+			</tbody>
+		</table>
+		<div class="rfloat">
+			<table id="signin" cellspacing="0">
+				<tbody>
+					<tr>
+					    <td><a id="login" title="登入" class="btn" href="#"></a></td>
+					    <td><span class="gbts"></span></td>
+					    <td><a id="register" title="註冊" class="btn" href="#"></a></td>
+				  	</tr>
+				</tbody>
+			</table>
+			
+			<a id="username" title="username" class="button" href="#">username</a>
+			<ul id="user_menu" class="tag_options">
+				<li class="liopt user_opt" style="">帳號設定</li>
+				<li class="liopt user_opt" style="">登出</li>
+			</ul>
+		</div>
+	</div>
+
+	<div id="routing_tile">
+		<span id="r_span"></span>
+		<div class="separator"></div>
+			<table id="r_mode_table" cellspacing="0">
+				<tbody>
+					<tr>
+						<td><a id="rm_route" title="路徑規劃模式" class="btn rm_btn" href="#"><span id="rm_r_img" class="rm_img"></span></a></td>
+					    <td><a id="rm_line" title="路徑連線模式" class="btn rm_btn" href="#"><span id="rm_l_img" class="rm_img"></span></a></td>
+				  	</tr>
+				</tbody>
+			</table>
+		<div class="separator"></div>
+		<div id="r_list">
+			<table id="r_travelmode_table" cellspacing="0">
+				<tbody>
+					<tr>
+					    <td><a id="rtm_car" title="開車" class="btn rtm_btn" href="#"></a></td>
+					    <td><a id="rtm_walk" title="步行" class="btn rtm_btn" href="#"></a></td>
+				  	</tr>
+				</tbody>
+			</table>
+			<ul id="rr_sortable">
+				<li id="rr_wrap_A" class="r_wrap">
+					<div class="r_num">
+						<span id="rr_span_A">A</span>
+					</div>
+					<div class="r_text">
+						<input id="rr_input_A" class="r_input" readonly="readonly" name="rr_input_A">
+					</div>
+				</li>
+				<li id="rr_wrap_B" class="r_wrap">
+					<div class="r_num">
+						<span id="rr_span_B">B</span>
+					</div>
+					<div class="r_text">
+						<input id="rr_input_B" class="r_input" readonly="readonly" name="rr_input_B">
+					</div>
+				</li>
+			</ul>
+			<ul id="rl_sortable">
+
+			</ul>
+		</div>
+		<div class="separator"></div>
+		<div id="r_tool">
+			<a id="r_clear" title="清除路徑" class="btn r_btn" href="#"><span id="rc_img" class="r_img"></span></a>
+			<a id="r_renew" title="路徑更新" class="btn r_btn" href="#"><span id="rr_img" class="r_img"></span></a>
+		</div>
+	</div>
+	<div id="map_canvas" style="width:100%; height:100%"></div>
+</body>
+</html>
